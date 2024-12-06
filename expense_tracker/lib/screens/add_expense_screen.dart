@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import '../theme/app_theme.dart';
 import '../models/expense.dart';
 import '../services/expense_service.dart';
 import 'dart:math';
@@ -43,21 +45,41 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Adicionar Despesa')),
+      appBar: AppBar(
+        title: Text('Adicionar Despesa'),
+        centerTitle: true,
+      ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(24.0),
         child: Form(
           key: _formKey,
           child: ListView(
             children: [
+              Text(
+                'Registre sua Despesa',
+                style: GoogleFonts.roboto(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.primary,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 24),
               TextFormField(
                 controller: _titleController,
-                decoration: InputDecoration(labelText: 'Título da Despesa'),
+                decoration: InputDecoration(
+                  labelText: 'Título da Despesa',
+                  prefixIcon: Icon(Icons.title, color: AppColors.primary),
+                ),
                 validator: (value) => value!.isEmpty ? 'Digite um título' : null,
               ),
+              SizedBox(height: 16),
               TextFormField(
                 controller: _amountController,
-                decoration: InputDecoration(labelText: 'Valor (R\$)'),
+                decoration: InputDecoration(
+                  labelText: 'Valor (R\$)',
+                  prefixIcon: Icon(Icons.attach_money, color: AppColors.primary),
+                ),
                 keyboardType: TextInputType.numberWithOptions(decimal: true),
                 validator: (value) {
                   if (value!.isEmpty) return 'Digite o valor';
@@ -65,8 +87,13 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
                   return null;
                 },
               ),
+              SizedBox(height: 16),
               DropdownButtonFormField<String>(
                 value: _selectedCategory,
+                decoration: InputDecoration(
+                  labelText: 'Categoria',
+                  prefixIcon: Icon(Icons.category, color: AppColors.primary),
+                ),
                 items: _categories.map((category) {
                   return DropdownMenuItem(
                     value: category,
@@ -78,17 +105,23 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
                     _selectedCategory = value!;
                   });
                 },
-                decoration: InputDecoration(labelText: 'Categoria'),
               ),
+              SizedBox(height: 16),
               TextFormField(
                 controller: _notesController,
-                decoration: InputDecoration(labelText: 'Notas adicionais (opcional)'),
+                decoration: InputDecoration(
+                  labelText: 'Notas adicionais (opcional)',
+                  prefixIcon: Icon(Icons.notes, color: AppColors.primary),
+                ),
                 maxLines: 3,
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 24),
               ElevatedButton(
                 onPressed: _submitExpense,
                 child: Text('Salvar Despesa'),
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.symmetric(vertical: 16),
+                ),
               ),
             ],
           ),
