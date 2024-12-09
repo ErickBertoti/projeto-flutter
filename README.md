@@ -4,7 +4,7 @@
 
 Expense Tracker é um aplicativo móvel desenvolvido em Flutter para gerenciamento de despesas pessoais. Permite aos usuários registrar, visualizar e analisar seus gastos de forma simples e intuitiva.
 
-## Funcionalidades ✨
+## Funcionalidades
 
 - Autenticação de Usuário
   - Login e registro
@@ -36,7 +36,7 @@ lib/
     └── auth_service.dart
 ```
 
-## Modelo de Dados 📋
+## Modelo de Dados
 
 ```dart
 class Expense {
@@ -49,13 +49,13 @@ class Expense {
 }
 ```
 
-## Limitações Atuais 🚧
+## Limitações Atuais
 
 - Autenticação local
 - Armazenamento de dados em memória
 - Sem persistência entre sessões
 
-## Melhorias Planejadas 🔜
+## Melhorias Planejadas
 
 - Integração com backend para autenticação
 - Persistência de dados em banco local
