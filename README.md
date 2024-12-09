@@ -57,8 +57,9 @@ class Expense {
 
 ## Requisitos do Sistema 💻
 
-- Flutter SDK
-- Dart
+- Flutter SDK: [https://docs.flutter.dev/get-started/install
+](url)
+- Dart: [https://dart.dev/get-dart](url)
 
 ## Instalação
 
