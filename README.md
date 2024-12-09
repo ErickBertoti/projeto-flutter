@@ -1,4 +1,4 @@
-# Expense Tracker 💸
+# Expense Tracker
 
 ## Visão Geral
 
@@ -69,7 +69,7 @@ class Expense {
 - Flutter SDK
 - Dart
 
-## Instalação 🛠️
+## Instalação
 
 1. Clone o repositório
 2. Execute `flutter pub get`
