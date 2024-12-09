@@ -55,15 +55,6 @@ class Expense {
 - Armazenamento de dados em memória
 - Sem persistência entre sessões
 
-## Melhorias Planejadas
-
-- Integração com backend para autenticação
-- Persistência de dados em banco local
-- Gráficos mais detalhados
-- Exportação de relatórios de despesas
-- Notificações de gastos
-- Sincronização em nuvem
-
 ## Requisitos do Sistema 💻
 
 - Flutter SDK
