@@ -64,5 +64,7 @@ class Expense {
 ## Instalação
 
 1. Clone o repositório
-2. Execute `flutter pub get`
-3. Inicie o aplicativo com `flutter run`
+2. Acesse o diretório do projeto
+`cd projeto-flutter`
+3. Execute `flutter pub get`
+4. Inicie o aplicativo com `flutter run`
